@@ -3,9 +3,9 @@ use anchor_spl::token::{self, Mint, Token, TokenAccount, Transfer};
 
 use crate::{
     states::pool_account::{PoolAccount, UserPurchase},
+    instructions::create_pool::IdoError,
     POOL_SEED,
     USER_PURCHASE_SEED,
-    instructions::create_pool::IdoError,
 };
 
 #[derive(Accounts)]

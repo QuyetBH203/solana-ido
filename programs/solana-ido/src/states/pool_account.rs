@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 
-#[account]
-#[derive(InitSpace)]
+#[account] // this is a solana account type
+#[derive(InitSpace)] // calculate the space required for the account
 pub struct PoolAccount {
     pub pool_id: u64,
     pub creator: Pubkey,

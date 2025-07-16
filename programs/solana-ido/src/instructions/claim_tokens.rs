@@ -75,7 +75,7 @@ pub fn process_claim_tokens(
     let pool_id_bytes = pool_id.to_le_bytes();
     let authority_seeds = &[
         b"pool_authority",
-        &pool_id_bytes,
+        &pool_id_bytes[..],
         &[ctx.bumps.pool_authority],
     ];
     let signer_seeds = &[&authority_seeds[..]];
