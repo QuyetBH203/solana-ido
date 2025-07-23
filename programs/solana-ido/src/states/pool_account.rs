@@ -18,7 +18,7 @@ pub struct PoolAccount {
 }
 
 impl PoolAccount {
-    pub const LEN: usize = 8 + PoolAccount::INIT_SPACE;
+    pub const LEN: usize = 8 + PoolAccount::INIT_SPACE; // calculate the space required for the account
 }
 
 #[account]

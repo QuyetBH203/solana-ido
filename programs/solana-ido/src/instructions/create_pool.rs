@@ -77,7 +77,7 @@ pub fn process_create_pool(
     pool_account.currency_mint = ctx.accounts.currency_mint.key();
     pool_account.token_mint = ctx.accounts.token_mint.key();
     pool_account.total_raised = 0;
-    pool_account.is_active = true;
+    pool_account.is_active = false;
     pool_account.bump = ctx.bumps.pool_account;
     
     Ok(())

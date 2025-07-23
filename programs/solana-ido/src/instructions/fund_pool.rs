@@ -52,6 +52,7 @@ pub fn process_fund_pool(
     
     // Ensure the amount matches the sale amount
     require!(amount == pool_account.sale_amount, IdoError::InvalidSaleAmount);
+    let pool_account = &mut ctx.accounts.pool_account;
     
     // Transfer IDO tokens from creator to pool
     let transfer_ctx = CpiContext::new(
@@ -63,6 +64,6 @@ pub fn process_fund_pool(
         },
     );
     token::transfer(transfer_ctx, amount)?;
-    
+    pool_account.is_active = true;
     Ok(())
 } 
